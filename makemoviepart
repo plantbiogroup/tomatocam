@@ -1,0 +1,5 @@
+# Run cam once every hour 15 minutes after the hour
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=tomatocam@thinkgland.com
+15 * * * * root /usr/local/bin/makemovie

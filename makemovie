@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source /usr/local/bin/tomatocam.ini
+
+cd ${DIR}
+ffmpeg -framerate 25 -i *pict.jpg -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p output.mp4

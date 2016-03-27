@@ -1,0 +1,5 @@
+# Run cleanup once every hour, 5 minutes after the hour
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=tomatocam@thinkgland.com
+5 * * * * root /usr/local/bin/cleanout

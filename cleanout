@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source /usr/local/bin/tomatocam.ini
+
+find ${DIR}. -type f -mtime +30 -delete
