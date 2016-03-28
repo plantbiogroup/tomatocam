@@ -9,6 +9,6 @@ do
     COUNT=$((COUNT+1))
 done
 
-avconv -y -i "${MOVIEDIR}/image-%d.jpg" -r 20 ${MOVIEDIR}/output.mp4 > /dev/null 2>&1
+avconv -y -i "${MOVIEDIR}/image-%d.jpg" -r 20 /var/www/html/output.mp4 > /dev/null 2>&1
 
 rm ${MOVIEDIR}/*.jpg

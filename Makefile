@@ -13,6 +13,7 @@ crons:
 	for i in $(CRONS); do chown root.root /etc/cron.d/$$i; done
 
 install: bins crons
+	cp index.html /var/www/html/
 
 uninstall:
 	-for i in $(BINS); do rm /usr/local/bin/$$i; done
