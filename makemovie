@@ -3,7 +3,7 @@
 source /usr/local/bin/tomatocam.ini
 
 COUNT=1
-for FILE in ${DIR}/*
+for FILE in ${PIXDIR}/*
 do
     ln -s ${FILE} ${MOVIEDIR}/image-${COUNT}.jpg
     COUNT=$((COUNT+1))

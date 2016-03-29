@@ -2,4 +2,18 @@
 
 source /usr/local/bin/tomatocam.ini
 
-find ${DIR}. -type f -mtime +30 -delete
+## When the current size is larger than the max
+## allowed size we repeatedly delete the 10 oldest
+## files until the CUR size is below the allowed
+## size
+
+while [ `du -s -BM ${PIXDIR} | cut -f 1 | tr -d "M"` -ge "${PIXDIRMAXSIZE}" ]
+do
+    ls -t1 ${PIXDIR} | tail | while read DELF
+			      do
+				  rm ${PIXDIR}/${DELF}
+			      done
+done
+
+## Uncomment the next line to delete files older than 30 days
+# find ${PIXDIR}. -type f -mtime +30 -delete

@@ -9,5 +9,5 @@ DATE=`date +%FT%T`
 ## -q -- quality <0 - 100>  set to 50 for small data size
 ## -n -- no preview, easier on the processor.
 ## Cheap and easy setting
-raspistill -vf -hf -ex auto -awb auto -t 1 -n -w 512 -h 512 -q 50 -o ${DIR}/${DATE}pict.jpg
-cp ${DIR}/${DATE}pict.jpg ${DIR}/last.jpg
+raspistill -vf -hf -ex auto -awb auto -t 1 -n -w 512 -h 512 -q 75 -o ${PIXDIR}/${DATE}pict.jpg
+cp ${PIXDIR}/${DATE}pict.jpg ${PIXDIR}/last.jpg
