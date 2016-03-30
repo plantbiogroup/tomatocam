@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 source /usr/local/bin/tomatocam.ini
 
 ## When the current size is larger than the max

@@ -2,4 +2,4 @@
 SHELL=/bin/bash
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=tomatocam@thinkgland.com
-*/10 * * * * root /usr/local/bin/cam
+* * * * * root /usr/local/bin/cam
