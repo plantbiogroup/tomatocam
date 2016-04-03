@@ -2,6 +2,7 @@
 
 source /usr/local/bin/tomatocam.ini
 
+## Make links from the pix dir called image-%d.jpg
 COUNT=1
 for FILE in ${PIXDIR}/*
 do
@@ -9,6 +10,7 @@ do
     COUNT=$((COUNT+1))
 done
 
-avconv -y -i "${MOVIEDIR}/image-%d.jpg" -r 20 /var/www/html/output.mp4 > /dev/null 2>&1
+avconv -y -i "${MOVIEDIR}/image-%d.jpg" -vf gradfun,hqdn3d -r 10 /var/www/html/output.mp4 > /dev/null 2>&1
+# Think about using concatenation.
 
 rm ${MOVIEDIR}/*.jpg
