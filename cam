@@ -16,7 +16,7 @@ raspistill -vf -hf -ex auto -awb auto -t 1 -n -w 1024 -h 1024 -q 100 -o ${LAST}
 if [ -f "${LABELFILE}" ]
 then
     LABEL=`cat ${LABELFILE}`
-    convert ${LAST} -fill white -undercolor '#00000080' -gravity SouthWest -annotate +0+5 "${LABEL}" ${PIC}
+    convert ${LAST} -fill white -undercolor '#00000080' -gravity NorthWest -annotate +0+5 "${LABEL}" ${PIC}
 else
     cp ${LAST} ${PIC}
 fi
