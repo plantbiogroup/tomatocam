@@ -9,7 +9,7 @@ then
     SECONDS=$((THISDAY-DAYSTART))
     SECONDS_PER_DAY=60*60*24
     DAY=$((SECONDS / SECONDS_PER_DAY))
-    cat<<EOF
+    cat<<EOF > ${LABELFILE}
 Day: `printf '%3d' ${DAY}`
 EOF
 fi

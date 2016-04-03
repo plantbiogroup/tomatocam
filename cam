@@ -2,8 +2,8 @@
 
 source /usr/local/bin/tomatocam.ini
 DATE=`date +%FT%T`
-PIC=${DIR}/${DATE}pict.jpg
-LAST=${DIR}/last.jpg
+PIC=${PIXDIR}/${DATE}pict.jpg
+LAST=${PIXDIR}/last.jpg
 
 ## -t -- Timeout for taking a picture
 ## -w -- width set to 256 for small data size
@@ -16,7 +16,7 @@ raspistill -vf -hf -ex auto -awb auto -t 1 -n -w 1024 -h 1024 -q 100 -o ${LAST}
 if [ -f "${LABELFILE}" ]
 then
     LABEL=`cat ${LABELFILE}`
-    convert ${LAST} -fill white -undercolor '#00000080' -gravity SouthWest -annotate +0+5 ${LABEL} ${PIC}
+    convert ${LAST} -fill white -undercolor '#00000080' -gravity SouthWest -annotate +0+5 "${LABEL}" ${PIC}
 else
     cp ${LAST} ${PIC}
 fi
