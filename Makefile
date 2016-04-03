@@ -1,6 +1,6 @@
-BINS=cam cleanout makemovie tomatocam.ini
+BINS=cam cleanout makemovie tomatolabel tomatocam.ini
 
-CRONS=campart cleanoutpart makemoviepart
+CRONS=campart cleanoutpart makemoviepart labelpart
 
 bins:
 	for i in $(BINS); do cp $$i /usr/local/bin; done

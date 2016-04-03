@@ -1,0 +1,15 @@
+#!/bin/bash
+source /usr/local/bin/tomatocam.ini
+
+## This script writes a new label to the label file every day.
+## The label becomes "Day: 42"
+if [ -f "${LABELFILE}" ]
+then
+    THISDAY=`date "+%s"`
+    SECONDS=$((THISDAY-DAYSTART))
+    SECONDS_PER_DAY=60*60*24
+    DAY=$((SECONDS / SECONDS_PER_DAY))
+    cat<<EOF
+Day: `printf '%3d' ${DAY}`
+EOF
+fi
