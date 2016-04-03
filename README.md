@@ -8,6 +8,11 @@ Update the system
 sudo apt-get update
 ```
 
+Install apache for serving out the movie
+```
+sudo install apache2
+```
+
 Install ffmpeg for making movies.  On some systems ffmpeg is called avconv.
 
 ###For sysytems that have ffmpeg:
