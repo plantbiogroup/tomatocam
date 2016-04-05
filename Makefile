@@ -1,4 +1,4 @@
-BINS=cam cleanout makemovie tomatolabel tomatocam.ini
+BINS=cam cleanout makemovie tomatolabel tomatocam.ini diffimage
 
 CRONS=campart cleanoutpart makemoviepart labelpart
 
