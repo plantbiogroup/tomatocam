@@ -1,0 +1,11 @@
+#!/bin/bash
+
+source /usr/local/bin/tomatocam.ini
+
+FIRST=`ls ${PIXDIR}/*.jpg | head -1`
+LAST=${PIXDIR}/last.jpg
+
+convert '(' ${FIRST} -flatten -grayscale Rec709Luminance ')' \
+	'(' ${LAST} -flatten -grayscale Rec709Luminance ')' \
+	'(' -clone 0-1 -compose darken -composite ')' \
+	-channel RGB -combine /tmp/diff.jpg
