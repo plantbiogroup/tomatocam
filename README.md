@@ -28,9 +28,9 @@ You can adjust the focal distance on the camera by rotating
 the screwing in or unscrewing the lens.
 
 To set the focus to F cm, unscrew the lens D degrees where
-'''
+```
 D = 360 * (3.5 cm / F)
-'''
+```
 For more information see http://elinux.org/Rpi_Camera_Module
 
 # Configuration
@@ -39,9 +39,9 @@ All the Tomato Pi functions are run with cron jobs.  You can
 find the cron jobs under /etc/cron.d.  By convention all
 Tomatocam cron jobs end with the name 'part'.  Have a look
 at
-'''
+```
 /etc/cron.d/campart.
-'''
+```
 
 To change the timing, edit the cron job files.  See
 http://linux.die.net/man/5/crontab.
@@ -51,9 +51,9 @@ reading the manual.
 
 All other parameters for the Tomatocam project are in the
 file
-'''
+```
 /usr/local/bin/tomatocam.ini
-'''
+```
 
 The file format is standarde Python Config parser format.
 
