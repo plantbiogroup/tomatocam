@@ -33,6 +33,16 @@ D = 360 * (3.5 cm / F)
 ```
 For more information see http://elinux.org/Rpi_Camera_Module
 
+A nice and easy trick to set the focus is to put a ruler
+from the lens outward slightly tilted towards the lens.
+Take a picture by using
+```
+sudo cam
+```
+The focus is about where you can see the picture of the
+ruler clearest.
+
+
 # Configuration
 
 All the Tomato Pi functions are run with cron jobs.  You can
